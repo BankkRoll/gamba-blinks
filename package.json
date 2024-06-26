@@ -1,0 +1,37 @@
+{
+  "name": "gamba-blinks",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "dev": "next dev",
+    "devSSL": "next dev --experimental-https",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write .",
+    "clean": "rmdir /s /q .next && rmdir /s /q node_modules"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.27.0",
+    "@solana/actions": "^1.0.2",
+    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/wallet-adapter-react": "^0.15.35",
+    "@solana/wallet-adapter-react-ui": "^0.9.35",
+    "@solana/web3.js": "^1.93.2",
+    "gamba-core-v2": "0.3.1",
+    "next": "^12.0.0",
+    "next-seo": "^6.5.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.56",
+    "@types/tailwindcss": "^3.1.0",
+    "autoprefixer": "^10.4.17",
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^12.0.0",
+    "postcss": "^8.4.35",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^4.9.5"
+  }
+}
