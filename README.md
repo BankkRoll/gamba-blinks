@@ -6,20 +6,20 @@
 
 **Request:**
 
-GET /action-endpoint
-Host: example.com
-Accept: application/json
-Accept-Encoding: gzip, deflate
-Origin: http://example.com
+- GET /action-endpoint
+- Host: example.com
+- Accept: application/json
+- Accept-Encoding: gzip, deflate
+- Origin: http://example.com
 
 **Response Headers:**
 
 HTTP/1.1 200 OK
-Content-Type: application/json
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET, POST, OPTIONS
-Access-Control-Allow-Headers: Content-Type, Authorization
-Content-Encoding: gzip
+- Content-Type: application/json
+- Access-Control-Allow-Origin: *
+- Access-Control-Allow-Methods: GET, POST, OPTIONS
+- Access-Control-Allow-Headers: Content-Type, Authorization
+- Content-Encoding: gzip
 
 **Response Body:**
 
@@ -59,11 +59,11 @@ Content-Encoding: gzip
 **Request:**
 
 POST /api/action-with-input
-Host: example.com
-Content-Type: application/json
-Accept: application/json
-Accept-Encoding: gzip, deflate
-Origin: http://example.com
+- Host: example.com
+- Content-Type: application/json
+- Accept: application/json
+- Accept-Encoding: gzip, deflate
+- Origin: http://example.com
 
 **Request Body:**
 
@@ -77,11 +77,11 @@ Origin: http://example.com
 **Response Headers:**
 
 HTTP/1.1 200 OK
-Content-Type: application/json
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET, POST, OPTIONS
-Access-Control-Allow-Headers: Content-Type, Authorization
-Content-Encoding: gzip
+- Content-Type: application/json
+- Access-Control-Allow-Origin: *
+- Access-Control-Allow-Methods: GET, POST, OPTIONS
+- Access-Control-Allow-Headers: Content-Type, Authorization
+- Content-Encoding: gzip
 
 **Response Body:**
 
@@ -97,17 +97,17 @@ Content-Encoding: gzip
 **Request:**
 
 OPTIONS /api/action-with-input
-Host: example.com
-Access-Control-Request-Method: POST
-Access-Control-Request-Headers: Content-Type
-Origin: http://example.com
+- Host: example.com
+- Access-Control-Request-Method: POST
+- Access-Control-Request-Headers: Content-Type
+- Origin: http://example.com
 
 **Response Headers:**
 
 HTTP/1.1 204 No Content
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET, POST, OPTIONS
-Access-Control-Allow-Headers: Content-Type, Authorization
+- Access-Control-Allow-Origin: *
+- Access-Control-Allow-Methods: GET, POST, OPTIONS
+- Access-Control-Allow-Headers: Content-Type, Authorization
 
 ### Example Error Handling
 
@@ -115,10 +115,10 @@ Access-Control-Allow-Headers: Content-Type, Authorization
 
 HTTP/1.1 400 Bad Request
 Content-Type: application/json
-Access-Control-Allow-Origin: *
-Access-Control-Allow-Methods: GET, POST, OPTIONS
-Access-Control-Allow-Headers: Content-Type, Authorization
-Content-Encoding: gzip
+- Access-Control-Allow-Origin: *
+- Access-Control-Allow-Methods: GET, POST, OPTIONS
+- Access-Control-Allow-Headers: Content-Type, Authorization
+- Content-Encoding: gzip
 
 **Error Response Body:**
 
