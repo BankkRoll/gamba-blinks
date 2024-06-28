@@ -18,6 +18,10 @@
     "@solana/wallet-adapter-react": "^0.15.35",
     "@solana/wallet-adapter-react-ui": "^0.9.35",
     "@solana/web3.js": "^1.93.2",
+    "bn.js": "^5.2.1",
+    "body-parser": "^1.20.2",
+    "bs58": "^4.0.1",
+    "cors": "^2.8.5",
     "gamba-core-v2": "0.3.1",
     "next": "^12.0.0",
     "next-seo": "^6.5.0",
@@ -25,6 +29,10 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@types/bn.js": "^5.1.5",
+    "@types/body-parser": "^1.19.5",
+    "@types/bs58": "^4.0.4",
+    "@types/cors": "^2.8.17",
     "@types/react": "^18.2.56",
     "@types/tailwindcss": "^3.1.0",
     "autoprefixer": "^10.4.17",
