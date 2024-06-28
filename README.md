@@ -23,6 +23,7 @@ Content-Encoding: gzip
 
 **Response Body:**
 
+```
 {
     "icon": "https://example.com/icon.png",
     "title": "Action Title",
@@ -51,6 +52,7 @@ Content-Encoding: gzip
         ]
     }
 }
+```
 
 ### 2. POST Request with User Input
 
@@ -65,10 +67,12 @@ Origin: http://example.com
 
 **Request Body:**
 
+```
 {
     "account": "userPublicKey",
     "parameter": "userInputValue"
 }
+```
 
 **Response Headers:**
 
@@ -81,10 +85,12 @@ Content-Encoding: gzip
 
 **Response Body:**
 
+```
 {
     "transaction": "base64EncodedTransaction",
     "message": "Action completed successfully!"
 }
+```
 
 ### 3. CORS Preflight Request (OPTIONS)
 
@@ -116,9 +122,11 @@ Content-Encoding: gzip
 
 **Error Response Body:**
 
+```
 {
     "error": "Invalid request parameters"
 }
+```
 
 ### Security Considerations
 
