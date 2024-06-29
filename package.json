@@ -1,25 +1,25 @@
 {
   "name": "gamba-blinks",
+  "license": "MIT",
+  "homepage": "https://github.com/BankkRoll/gamba-blinks",
+  "repository": "https://github.com/BankkRoll/gamba-blinks.git",
+  "author": "BankkRoll",
   "private": true,
   "version": "1.0.0",
-  "description": "",
+  "description": "Experience on-chain degeneracy with Gamba Blinks, a decentralized gambleFi protocol on Solana.",
   "scripts": {
     "dev": "next dev",
     "devSSL": "next dev --experimental-https",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write .",
     "clean": "rmdir /s /q .next && rmdir /s /q node_modules"
   },
   "dependencies": {
     "@coral-xyz/anchor": "^0.27.0",
-    "@solana/actions": "^1.0.2",
-    "@solana/wallet-adapter-base": "^0.9.23",
+    "@solana/spl-token": "^0.4.7",
     "@solana/wallet-adapter-react": "^0.15.35",
     "@solana/wallet-adapter-react-ui": "^0.9.35",
     "@solana/web3.js": "^1.93.2",
-    "bn.js": "^5.2.1",
-    "body-parser": "^1.20.2",
     "bs58": "^4.0.1",
     "cors": "^2.8.5",
     "gamba-core-v2": "0.3.1",
@@ -29,8 +29,6 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@types/bn.js": "^5.1.5",
-    "@types/body-parser": "^1.19.5",
     "@types/bs58": "^4.0.4",
     "@types/cors": "^2.8.17",
     "@types/react": "^18.2.56",
@@ -40,6 +38,6 @@
     "eslint-config-next": "^12.0.0",
     "postcss": "^8.4.35",
     "tailwindcss": "^3.4.1",
-    "typescript": "^4.9.5"
+    "typescript": "^5"
   }
 }
