@@ -203,12 +203,12 @@ export async function preparePlayTransaction(
     try {
       playInstruction = await gambaProgram.methods
         .playGame(
-          new anchor.BN(bnWager),
-          [2, 0].map(basisPoints),
-          clientSeed,
-          basisPoints(0.05),
-          basisPoints(0.01),
-          "0:Blinks"
+          new anchor.BN(bnWager),  // Wager
+          [2, 0].map(basisPoints), // Bet array
+          clientSeed,              // Client seed
+          basisPoints(0.05),       // Game fee
+          basisPoints(0.01),       // Jackpot fee
+          "0:blinks"               // Metadata
         )
         .accounts({
           user: userPublicKey,

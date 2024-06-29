@@ -60,7 +60,9 @@ export default async function handler(
         actions: [
           {
             label: "Play",
-            href: encodeURI(`/api/play-gamba?amount=${encodeURIComponent(amount as string)}`)
+            href: encodeURI(
+              `/api/play-gamba?amount=${encodeURIComponent(amount as string)}`
+            ),
             parameters: [
               {
                 name: "amount",
