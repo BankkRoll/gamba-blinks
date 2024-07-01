@@ -60,9 +60,7 @@ export default async function handler(
         actions: [
           {
             label: "Play",
-            href: `${encodeURIComponent(
-              `https://gamba-blinks.vercel.app/api/blinks/play-gamba?amount=${amount}`
-            )}`,
+            href: `/api/blinks/play-gamba?amount=${encodeURIComponent(amount as string)}`,
             parameters: [
               {
                 name: "amount",
@@ -101,25 +99,19 @@ export default async function handler(
 
       // Decode account
       const userPublicKey = new PublicKey(bs58.decode(account));
-
+      
       // Create the transaction
       const { transaction, message } = await preparePlayTransaction(
         userPublicKey,
         Number(amount)
       );
 
-      const serializedTransaction = transaction
-        .serialize({ requireAllSignatures: false })
-        .toString("base64");
-
-      const fullSerializedTransaction = transaction
-        .serialize()
-        .toString("base64");
-
       // Create response payload
       const payload: ActionPostResponse = {
-        transaction: serializedTransaction,
-        message: `${message} ${fullSerializedTransaction}`,
+        transaction: transaction
+          .serialize({ requireAllSignatures: false })
+          .toString("base64"),
+        message,
       };
 
       // Send response

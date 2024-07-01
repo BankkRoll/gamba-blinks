@@ -53,7 +53,7 @@ export const gambaProgram = new anchor.Program(IDL, PROGRAM_ID, provider);
  */
 export async function preparePlayTransaction(
   userPublicKey: PublicKey,
-  amount: number,
+  amount: number
 ): Promise<{ transaction: Transaction; message: string }> {
   // Client seed for randomness
   const clientSeed = String(Math.random() * 1e9);
@@ -104,8 +104,7 @@ export async function preparePlayTransaction(
         await connection.getLatestBlockhash()
       ).blockhash;
 
-      const message =
-        "Player account not found. Please sign this transaction to create it. Then try again.";
+      const message = `Player account initialized. Now your ready to play! https://explorer.gamba.so/player/${userPublicKey.toString()}`;
       console.log(message);
       return { transaction: initTransaction, message };
     }
@@ -118,7 +117,7 @@ export async function preparePlayTransaction(
     try {
       userUnderlyingAta = getAssociatedTokenAddressSync(
         UNDERLYING_TOKEN_MINT,
-        userPublicKey,
+        userPublicKey
       );
     } catch (error) {
       // Handle error when getting user's associated token address
@@ -131,7 +130,7 @@ export async function preparePlayTransaction(
     try {
       creatorAta = getAssociatedTokenAddressSync(
         UNDERLYING_TOKEN_MINT,
-        CREATOR_PUBLIC_KEY,
+        CREATOR_PUBLIC_KEY
       );
     } catch (error) {
       // Handle error when getting creator's associated token address
@@ -155,7 +154,7 @@ export async function preparePlayTransaction(
       playerAta = getAssociatedTokenAddressSync(
         UNDERLYING_TOKEN_MINT,
         player,
-        true,
+        true
       );
     } catch (error) {
       // Handle error when getting player's associated token address
@@ -208,7 +207,7 @@ export async function preparePlayTransaction(
           clientSeed, // Client seed
           basisPoints(0.05), // Game fee
           basisPoints(0.01), // Jackpot fee
-          "0:blinks", // Metadata
+          "0:blinks" // Metadata
         )
         .accounts({
           user: userPublicKey,
