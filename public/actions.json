@@ -2,7 +2,7 @@
   "rules": [
     {
       "pathPattern": "/*",
-      "apiPath": "https://gamba-blinks.vercel.app/api/play-gamba?"
+      "apiPath": "https://gamba-blinks.vercel.app/api/blinks/play-gamba"
     }
   ]
 }
