@@ -209,7 +209,6 @@ export const columns: ColumnDef<GambaEvent>[] = [
                 </DropdownMenuSubContent>
               </DropdownMenuSub>
             </DropdownMenuGroup>
-            <DropdownMenuItem disabled>Share (Coming Soon)</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );

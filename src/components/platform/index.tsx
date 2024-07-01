@@ -65,7 +65,7 @@ const Platform: React.FC = () => {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">Volume</CardTitle>
+              <CardTitle className="text-sm font-medium">Est. Volume</CardTitle>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -86,7 +86,7 @@ const Platform: React.FC = () => {
                   : "0"}
               </div>
               <p className="text-xs text-muted-foreground">
-                Estimated Revenue: $
+                Est. Revenue: $
                 {typeof stats?.revenue_usd === "number"
                   ? `${stats.revenue_usd.toFixed(2)}`
                   : "0"}

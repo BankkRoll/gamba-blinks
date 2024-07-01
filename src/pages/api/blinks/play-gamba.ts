@@ -1,4 +1,5 @@
 // src/pages/api/blinks/play-gamba.ts
+
 import {
   ActionGetResponse,
   ActionPostRequest,
@@ -29,12 +30,12 @@ const cors = initMiddleware(
   Cors({
     methods: ["GET", "POST", "OPTIONS"],
     origin: "*",
-  })
+  }),
 );
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   await cors(req, res); // Apply CORS
 
@@ -43,7 +44,7 @@ export default async function handler(
     res.setHeader("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
     res.setHeader(
       "Access-Control-Allow-Headers",
-      "Content-Type, Authorization, Accept-Encoding"
+      "Content-Type, Authorization, Accept-Encoding",
     );
     res.status(200).end();
   } else if (req.method === "GET") {
@@ -99,11 +100,11 @@ export default async function handler(
 
       // Decode account
       const userPublicKey = new PublicKey(bs58.decode(account));
-      
+
       // Create the transaction
       const { transaction, message } = await preparePlayTransaction(
         userPublicKey,
-        Number(amount)
+        Number(amount),
       );
 
       // Create response payload

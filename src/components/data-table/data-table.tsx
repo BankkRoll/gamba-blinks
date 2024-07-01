@@ -155,7 +155,7 @@ export function DataTable({
           variant="outline"
           size="sm"
           onClick={() => onPageChange(currentPage - 1)}
-          disabled={currentPage === 1 || pageLoading}
+          disabled={currentPage === 0 || pageLoading}
         >
           Previous
         </Button>
@@ -163,7 +163,7 @@ export function DataTable({
           variant="outline"
           size="sm"
           onClick={() => onPageChange(currentPage + 1)}
-          disabled={pageLoading}
+          disabled={pageLoading || data.length < 10}
         >
           Next
         </Button>
