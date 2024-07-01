@@ -1,5 +1,13 @@
 # Gamba Blinks
 
+### On-Chain Degeneracy
+
+Gamba Blinks leverages the Actions and Blinks protocols to share interactive Solana transactions through URLs. When shared, these URLs can unfurl into full experiences, like a preview, within clients that support Blinks, such as Twitter.
+
+Gamba Blinks is fully on-chain and provably fair, with all interactions and transactions being transparent and verifiable. Integration with Blinks allows seamless sharing of Solana transactions through URLs.
+
+![image](https://github.com/BankkRoll/gamba-blinks/assets/106103625/9ac42177-e9b1-487e-9cc4-3e852cef5741)
+
 ### On-Chain Game Account Requirement
 
 Before using Gamba Blinks, users need to create an on-chain game account. This is required for the first interaction. Subsequent plays will use the user’s wallet but interact with their game account in the program.
@@ -27,12 +35,3 @@ Simply replace `0.01` with your desired amount. For example, to set the amount t
 ```
 https://gamba-blinks.vercel.app/api/blinks/play-gamba?amount=0.05
 ```
-
-
-### On-Chain Degeneracy
-
-Gamba Blinks enables users to engage in on-chain gambling using SOL, ensuring transparency and fairness verifiable on-chain.
-
-Gamba Blinks is fully on-chain and provably fair, with all interactions and transactions being transparent and verifiable. Integration with Blinks allows seamless sharing of Solana transactions through URLs.
-
-![image](https://github.com/BankkRoll/gamba-blinks/assets/106103625/9ac42177-e9b1-487e-9cc4-3e852cef5741)
